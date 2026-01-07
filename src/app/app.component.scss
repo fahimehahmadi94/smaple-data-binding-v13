@@ -1,0 +1,12 @@
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+
+.active {
+  width: 50%;
+  background: darkred;
+  color: black;
+  font-size: 18px;
+}
