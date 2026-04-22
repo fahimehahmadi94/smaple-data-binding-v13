@@ -1,27 +1,28 @@
-# BindingOld
+# Data Binding
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.11.
+چرا؟
+هدف Angular این است که: 1- UI همیشه بازتاب state برنامه باشد (بدون اینکه دستی document.querySelector و innerHTML و… بنویسی)
+2- رویدادهای کاربر (کلیک، تایپ، …) راحت به کد TypeScript وصل شوند
+3- بین Component (مدل/State) و Template (View) یک ارتباط استاندارد و امن برقرار شود
 
-## Development server
+*نتیجه : “اتصال داده و رویداد بین Component و DOM، به‌صورت declarative (اعلامی)”
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Interpolation `{{ }}`
 
-## Code scaffolding
+نمایش مقدار یک متغیر یا expression از Component به‌صورت متن داخل Template.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## TextContent Binding `[textContent]="expression"`
 
-## Build
+قرار دادن متن یک element از طریق property binding به جای interpolation.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Property Binding `[property]="expression"`
 
-## Running unit tests
+اتصال مستقیم مقدار یک متغیر از Component به یک DOM property.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Event Binding `(event)="handler($event)"`
 
-## Running end-to-end tests
+اتصال یک رویداد DOM (مثل click یا keyup) به متد Component.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Two-way Binding `[(ngModel)]`
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+همزمان مقدار را از Component به View می‌فرستد و تغییرات View را به Component برمی‌گرداند.
