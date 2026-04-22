@@ -1,0 +1,18 @@
+<section class="card">
+  <h2>Two-way Binding [(ngModel)]</h2>
+
+  <input [(ngModel)]="name">
+  <p>Hello {{ name }}</p>
+
+  <hr>
+
+  <input [value]="name">
+
+  <hr>
+
+  <p>Equivalent to:</p>
+  <input
+    [value]="name"
+    (input)="name = $any($event.target).value"
+  >
+</section>

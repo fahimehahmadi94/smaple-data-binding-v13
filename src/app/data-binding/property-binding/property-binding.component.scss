@@ -1,0 +1,34 @@
+table, th, td {
+  border-collapse: collapse;
+  padding: 8px;
+  border: 1px solid #e0e0e8;
+
+  th {
+    background-color: #f1f1f7;
+  }
+}
+
+.style-box {
+  margin-top: 12px;
+  height: 40px;
+  background-color: #5c6bc0;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  padding-left: 12px;
+  border-radius: 6px;
+}
+
+.box {
+  margin-top: 12px;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #e0e0e8;
+  background-color: #fce4ec;
+}
+
+.active {
+  background-color: #dd0031;
+  color: white;
+}
+

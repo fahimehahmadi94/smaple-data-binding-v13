@@ -1,0 +1,62 @@
+<!-- ================= Property Binding ================= -->
+<section class="card">
+  <h2>Property Binding</h2>
+
+  <p>Correct way:</p>
+  <img [src]="imageUrl" width="80" alt="Angular Logo">
+  <br><br>
+  <button [disabled]="!isDisabled">Save</button>
+
+  <hr>
+
+  <p>Interpolation (❌ not recommended):</p>
+  <img src="{{ imageUrl }}" width="80" alt="Angular Logo">
+  <br><br>
+  <button disabled="{{ !isDisabled }}">Save</button>
+
+  <p class="warning">
+    Interpolation converts values to strings → problematic for booleans
+  </p>
+</section>
+
+<!-- ================= Attribute Binding ================= -->
+<section class="card">
+  <h2>Attribute Binding</h2>
+
+  <table style="width:50%">
+    <tr>
+      <th [attr.colspan]="cols">Name and Family</th>
+      <th>Age</th>
+    </tr>
+    <tr>
+      <td [attr.colspan]="cols">
+        Jill Smith
+      </td>
+      <td>43</td>
+    </tr>
+    <tr>
+      <td [attr.colspan]="cols">Eve Jackson</td>
+      <td>57</td>
+    </tr>
+  </table>
+</section>
+
+<!-- ================= Class Binding ================= -->
+<section class="card">
+  <h2>Class Binding</h2>
+
+  <button (click)="isActive = !isActive">Toggle Active</button>
+  <div class="box" [class.active]="isActive">
+    Active: {{ isActive }}
+  </div>
+</section>
+
+<!-- ================= Style Binding ================= -->
+<section class="card">
+  <h2>Style Binding</h2>
+
+  <input type="range" min="100" max="400" [(ngModel)]="width">
+  <div class="style-box" [style.width.px]="width">
+    Width: {{ width }}px
+  </div>
+</section>
